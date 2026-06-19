@@ -13,40 +13,38 @@ It is inspired by general interaction patterns found in high-end app, hardware, 
 - Aider / agy-style terminal agents: read `CONVENTIONS.md`, then the skill file.
 - Generic Markdown-reading agents: start with `AGENTS.md`.
 
-## Install As A Codex Skill
+## Universal Install
 
-This repo now includes an installable Codex skill at:
+Monich installs into common skill/rule folders for Codex, Claude Code, Gemini CLI, Cursor, Windsurf, Cline, Antigravity-style agents, and generic Markdown-reading agents.
 
-`installable/monich/`
-
-One-line install from GitHub on Windows PowerShell:
+Windows PowerShell:
 
 ```powershell
 irm https://raw.githubusercontent.com/WyvernCW/Monich/main/install.ps1 | iex
 ```
 
-Install on Windows PowerShell:
-
-```powershell
-cd C:\path\to\Monich
-.\install.ps1
-```
-
-Install on macOS/Linux:
+macOS/Linux:
 
 ```bash
-cd /path/to/Monich
-./install.sh
+curl -fsSL https://raw.githubusercontent.com/WyvernCW/Monich/main/install.sh | sh
 ```
 
-Manual install:
+The installer writes Monich into these locations when supported by the agent:
 
-```bash
-mkdir -p ~/.codex/skills
-cp -R installable/monich ~/.codex/skills/monich
-```
+- `~/.codex/skills/monich`
+- `~/.claude/skills/monich`
+- `~/.agents/skills/monich`
+- `~/.gemini/extensions/monich`
+- `~/.cursor/rules/monich.mdc`
+- `~/.windsurf/rules/monich.md`
+- `~/.cline/rules/monich.md`
+- `~/.clinerules/monich.md`
+- `~/.antigravity/rules/monich.md`
+- `~/.monich/monich`
 
-Then restart Codex/Codex CLI if it was already running and invoke:
+For project-local rule files, run the installer with `-ProjectPath` on PowerShell or `PROJECT_PATH=/path/to/project` on macOS/Linux.
+
+Then restart any already-open agent apps/CLIs and invoke:
 
 ```text
 Use $monich to build a premium scroll-driven product showcase.
