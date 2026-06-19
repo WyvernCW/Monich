@@ -123,11 +123,11 @@ $installs += "Generic agents: ~/.agents/skills/monich"
 Reset-CopyDirectory -Source $skillSource -Target (Join-Path $homeDir ".monich\monich")
 $installs += "Universal copy: ~/.monich/monich"
 
-$geminiTarget = Join-Path $homeDir ".gemini\extensions\monich"
+$geminiTarget = Join-Path $homeDir ".gemini\skills\monich"
 Reset-CopyDirectory -Source $skillSource -Target $geminiTarget
 Write-TextFile -Path (Join-Path $geminiTarget "gemini-extension.json") -Text $geminiConfig
 Write-TextFile -Path (Join-Path $geminiTarget "GEMINI.md") -Text $loaderText
-$installs += "Gemini CLI: ~/.gemini/extensions/monich"
+$installs += "Gemini: ~/.gemini/skills/monich"
 
 Write-TextFile -Path (Join-Path $homeDir ".cursor\rules\monich.mdc") -Text $cursorRule
 $installs += "Cursor rule: ~/.cursor/rules/monich.mdc"

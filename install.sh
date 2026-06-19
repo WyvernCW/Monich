@@ -111,10 +111,10 @@ copy_dir "$SKILL_SOURCE" "$HOME_DIR/.codex/skills/monich"
 copy_dir "$SKILL_SOURCE" "$HOME_DIR/.claude/skills/monich"
 copy_dir "$SKILL_SOURCE" "$HOME_DIR/.agents/skills/monich"
 copy_dir "$SKILL_SOURCE" "$HOME_DIR/.monich/monich"
-copy_dir "$SKILL_SOURCE" "$HOME_DIR/.gemini/extensions/monich"
+copy_dir "$SKILL_SOURCE" "$HOME_DIR/.gemini/skills/monich"
 
-printf "%s\n" "$GEMINI_CONFIG" | write_file "$HOME_DIR/.gemini/extensions/monich/gemini-extension.json"
-printf "%s\n" "$LOADER_TEXT" | write_file "$HOME_DIR/.gemini/extensions/monich/GEMINI.md"
+printf "%s\n" "$GEMINI_CONFIG" | write_file "$HOME_DIR/.gemini/skills/monich/gemini-extension.json"
+printf "%s\n" "$LOADER_TEXT" | write_file "$HOME_DIR/.gemini/skills/monich/GEMINI.md"
 printf "%s\n" "$CURSOR_RULE" | write_file "$HOME_DIR/.cursor/rules/monich.mdc"
 printf "%s\n" "$LOADER_TEXT" | write_file "$HOME_DIR/.windsurf/rules/monich.md"
 printf "%s\n" "$LOADER_TEXT" | write_file "$HOME_DIR/.cline/rules/monich.md"
@@ -134,7 +134,7 @@ Installed Monich for:
  - Codex: ~/.codex/skills/monich
  - Claude Code: ~/.claude/skills/monich
  - Generic agents: ~/.agents/skills/monich
- - Gemini CLI: ~/.gemini/extensions/monich
+ - Gemini: ~/.gemini/skills/monich
  - Cursor rule: ~/.cursor/rules/monich.mdc
  - Windsurf rule: ~/.windsurf/rules/monich.md
  - Cline rules: ~/.cline/rules/monich.md and ~/.clinerules/monich.md

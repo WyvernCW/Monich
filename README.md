@@ -34,7 +34,7 @@ The installer writes Monich into these locations when supported by the agent:
 - `~/.codex/skills/monich`
 - `~/.claude/skills/monich`
 - `~/.agents/skills/monich`
-- `~/.gemini/extensions/monich`
+- `~/.gemini/skills/monich`
 - `~/.cursor/rules/monich.mdc`
 - `~/.windsurf/rules/monich.md`
 - `~/.cline/rules/monich.md`
