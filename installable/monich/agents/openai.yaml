@@ -1,0 +1,8 @@
+interface:
+  display_name: "Monich"
+  short_description: "Premium scroll-driven showcase websites"
+  brand_color: "#704421"
+  default_prompt: "Use $monich to build a premium scroll-driven product showcase with sticky scenes, responsive motion, and no copied brand assets."
+
+policy:
+  allow_implicit_invocation: true

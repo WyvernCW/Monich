@@ -1,0 +1,17 @@
+{
+  "name": "monich",
+  "version": "1.0.0",
+  "description": "Portable multi-agent skill pack for premium scroll-driven showcase websites.",
+  "skills": [
+    {
+      "name": "monich",
+      "path": "installable/monich",
+      "entry": "installable/monich/SKILL.md"
+    }
+  ],
+  "templates": [
+    "installable/monich/assets/templates/react-vite-motion",
+    "installable/monich/assets/templates/react-vite-gsap",
+    "installable/monich/assets/templates/plain-html-css-js"
+  ]
+}
