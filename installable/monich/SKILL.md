@@ -1,5 +1,6 @@
 ---
 name: monich
+license: MIT
 description: Build premium scroll-driven web pages and product showcases inspired by high-end app, hardware, and product interaction patterns. Use for Raycast-like, Apple-like, NVIDIA-like, RTX/GPU, SaaS, AI browser, parallax, sticky scroll, pinned reveal, Three.js GLB model, Web Audio sound effect, Motion React, GSAP ScrollTrigger, responsive accessibility, and performance-safe frontend requests.
 ---
 

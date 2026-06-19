@@ -1,6 +1,7 @@
 {
   "name": "monich",
   "version": "1.0.0",
+  "license": "MIT",
   "description": "Portable multi-agent skill pack for premium scroll-driven showcase websites.",
   "skills": [
     {

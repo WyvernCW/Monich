@@ -115,6 +115,10 @@ For Codex-specific sharing, copy only `installable/monich/` into another person'
 
 Do not copy real brand assets. Do not use real product names, screenshots, logos, exact layouts, or marketing claims. Recreate only broad interaction patterns: sticky scenes, parallax depth, pinned reveal, large typography, clean dark UI, CSS mockups, technical spec panels, and responsive storytelling.
 
+## License
+
+Monich is released under the MIT License. See `LICENSE`.
+
 ## Troubleshooting
 
 - Missing package: run `npm install` inside the selected template folder.
