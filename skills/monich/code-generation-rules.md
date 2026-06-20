@@ -6,8 +6,8 @@
 - Use React + Vite for fast runnable demos.
 - Use React + Next.js when the user asks for Next.js, the existing project uses Next.js, or the page needs routing, metadata, static generation, or app-router structure.
 - Adapt these patterns to Astro, SvelteKit, Vue, Nuxt, Web Components, or another frontend stack when requested.
-- Use plain HTML/CSS/JS only for explicit no-framework, one-file, or highly portable demos.
-- Scan `templates/` before choosing references, including `templates/web-template/`.
+- Use plain HTML/CSS/JS when requested or when discovered templates make it the best fit.
+- Read and scan `templates/` before choosing references.
 - Use templates to learn structure and design intent, not as paste-in source.
 - Recreate patterns as fresh components, data, class names, CSS variables, and copy.
 - Keep the showcase in one readable component.
@@ -32,10 +32,7 @@
 
 ## Dependency Rules
 
-- Motion template uses `motion` and imports from `motion/react`.
-- GSAP template uses `gsap` and `gsap/ScrollTrigger`.
-- React 3D templates use `three` for procedural models.
-- Plain template uses no external dependencies.
+- Use only dependencies required by the selected implementation.
 - Do not add dependencies that are not used.
 - Do not use external images unless the user provides them.
 
@@ -61,10 +58,8 @@ Never import placeholder image files that do not exist.
 
 ## Template Selection
 
-- Always start by scanning the available `templates/` folders.
-- `templates/react-vite-motion/`: simple parallax, app/SaaS pages, command palette, floating cards.
-- `templates/react-vite-gsap/`: pinned timeline, hardware reveal, Apple/NVIDIA-like staged product stories.
-- `templates/plain-html-css-js/`: explicit no-framework, one-file demo, simple portable example.
-- `templates/web-template/`: broader website design systems, page recipes, references, and template inspiration.
+- Always start by reading and scanning the available `templates/` folder.
+- Build an inventory of immediate subfolders before reading individual template docs.
+- Choose references only after the inventory exists.
 
 Do not copy a template codebase into the generated project. Read the smallest relevant files, identify the reusable ideas, and write new code that fits the user's requested stack, content, and language.

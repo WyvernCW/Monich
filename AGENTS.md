@@ -28,15 +28,9 @@ Use the Monich skill for requests containing concepts like:
 ## Required Workflow
 
 1. Read `skills/monich/SKILL.md`.
-2. Scan the whole `templates/` directory before choosing an implementation path. Include `templates/web-template/`, not only the scroll-specific starter templates.
-3. Pick the correct implementation path:
-   - React by default
-   - React + Motion for simple parallax
-   - React + GSAP ScrollTrigger for pinned timeline
-   - React + Next.js if the user asks for Next.js or the project already uses it
-   - plain HTML/CSS/JS only when explicit no-framework or one-file output is requested
-   - other frameworks when the user or existing project requires them
-4. Learn from the matching template and any relevant `web-template` references.
+2. Read and scan the whole `templates/` folder before choosing references. Do not jump directly into any named template subfolder.
+3. Build a small inventory of available template folders.
+4. Learn from selected references without copying their code line-by-line.
 5. Generate complete runnable code.
 6. Include responsive CSS.
 7. Include reduced-motion fallback.
@@ -57,7 +51,7 @@ Use the Monich skill for requests containing concepts like:
 - Use CSS-only mockups when assets are missing.
 - Default to React for generated websites.
 - Adapt to Next.js, Astro, SvelteKit, Vue, Nuxt, or plain HTML/CSS/JS when requested.
-- Use templates as references for layout, motion rhythm, typography scale, spacing, and component patterns.
+- Use the scanned templates as references for layout, motion rhythm, typography scale, spacing, and component patterns.
 - Do not copy-paste a template codebase or large code blocks into the user's project.
 - Rebuild the page in the target stack with fresh component names, content, data, tokens, and CSS that fit the user request.
 - If a copied template contains Chinese, translate or rewrite all visible UI copy into the user's language unless Chinese was requested.

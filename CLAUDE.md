@@ -6,18 +6,15 @@ At the start of any task involving scroll websites, sticky product stories, para
 
 `skills/monich/SKILL.md`
 
-Use progressive disclosure, but always scan the available template folders first. Do not stop at the React Vite or plain HTML starters; include `templates/web-template/` in the template inventory before choosing references.
+Use progressive disclosure, but always read and scan the available `templates/` folder before choosing references. Do not jump directly into any named template subfolder.
 
 ## Template Selection
 
 - Default to React for generated websites unless the user asks for another stack.
 - Start by listing or scanning `templates/` so the available template families are known.
-- For simple parallax, floating cards, app UI reveals, and Raycast-clean SaaS pages, use `templates/react-vite-motion/`.
-- For Apple/NVIDIA-style pinned timelines, staged hardware/product reveals, scroll scrub sections, and technical spec reveals, use `templates/react-vite-gsap/`.
-- For Next.js requests or existing Next.js projects, adapt the React template into the app-router or pages-router structure already in the project.
+- Choose references only after that scan.
+- For Next.js requests or existing Next.js projects, adapt discovered template patterns into the app-router or pages-router structure already in the project.
 - For Astro, SvelteKit, Vue, Nuxt, or other stacks, preserve the Monich scroll architecture and translate the component patterns into the requested framework.
-- For no-framework requests or quick portable demos, use `templates/plain-html-css-js/`.
-- For broader website references, read `templates/web-template/INDEX.md` or `templates/web-template/SKILL.md`.
 
 ## Working Rules
 

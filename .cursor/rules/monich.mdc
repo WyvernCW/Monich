@@ -1,5 +1,5 @@
 ---
-description: Build premium scroll-driven showcase websites with sticky scenes, parallax layers, pinned timelines, and responsive accessible motion.
+description: Build premium scroll-driven showcase websites after scanning the template folder and adapting references into fresh responsive code.
 globs:
   - "**/*.jsx"
   - "**/*.tsx"
@@ -17,12 +17,9 @@ Use this rule when a user asks for a Raycast-style website, Apple-style showcase
 ## Files To Read
 
 1. `skills/monich/SKILL.md`
-2. Scan the available folders in `templates/`, including `templates/web-template/`.
-3. Choose the smallest relevant reference set:
-   - `templates/react-vite-motion/` for simple parallax and app UI reveals
-   - `templates/react-vite-gsap/` for pinned scrub timelines
-   - `templates/plain-html-css-js/` for explicit no-framework work
-   - `templates/web-template/` for broader website references, page recipes, and design-system guidance
+2. Read and scan the whole `templates/` folder.
+3. Build an inventory of available template folders.
+4. Choose the smallest relevant reference set from that inventory.
 
 ## Implementation Rules
 
@@ -30,7 +27,7 @@ Use this rule when a user asks for a Raycast-style website, Apple-style showcase
 - Default to React for generated websites.
 - Use React + Vite for fast demos and React + Next.js when the user asks for Next.js or the project already uses it.
 - Adapt to Astro, SvelteKit, Vue, Nuxt, or another framework when requested.
-- Use plain HTML/CSS/JS only for explicit no-framework or one-file requests.
+- Use the stack requested by the user, the existing project, or the template scan.
 - Use sticky sections with tall wrappers from 250vh to 500vh.
 - Keep a single main focal object.
 - Build layered depth: background, glow/grid, midground cards, product mockup, foreground text.

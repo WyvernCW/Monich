@@ -8,11 +8,7 @@ Read `skills/monich/SKILL.md` before implementing.
 
 ## Template Locations
 
-- Scan the whole `templates/` directory before choosing references. Do not limit selection to the three scroll starter folders.
-- Simple parallax and app UI reveal: `templates/react-vite-motion/`
-- Pinned timeline and staged product reveal: `templates/react-vite-gsap/`
-- Explicit no-framework or one-file demo: `templates/plain-html-css-js/`
-- Broader website design references and page recipes: `templates/web-template/`
+Read and scan the whole `templates/` directory before choosing references. Build an inventory from the folder contents, then choose the smallest relevant reference set.
 
 ## Implementation Rules
 
@@ -21,7 +17,7 @@ Read `skills/monich/SKILL.md` before implementing.
 - Use React + Vite for fast runnable demos.
 - Use React + Next.js when the user asks for Next.js or the existing project uses it.
 - Adapt to Astro, SvelteKit, Vue, Nuxt, or another framework when requested.
-- Use plain HTML/CSS/JS only for explicit no-framework or one-file requests.
+- Use the stack requested by the user, the existing project, or the template scan.
 - Use semantic HTML and readable component names.
 - Use sticky sections with tall wrappers from 250vh to 500vh.
 - Include one clear focal app/product/object mockup.
@@ -40,8 +36,6 @@ Read `skills/monich/SKILL.md` before implementing.
 
 - Animate transform and opacity.
 - Avoid animating top, left, width, height, margin, padding, or expensive filters during scroll.
-- Use Motion React for simple scroll progress transforms.
-- Use GSAP ScrollTrigger for pinned scrub timelines.
 - Use requestAnimationFrame for manual scroll progress in plain JS.
 - Avoid scroll event spam.
 - Use `will-change` sparingly on the animated focal elements only.

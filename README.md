@@ -73,13 +73,7 @@ Templates are references, not code to paste wholesale. Agents should study layou
 
 Default to React for generated websites unless the user asks for a different stack. React + Vite is the default for fast runnable demos, React + Next.js is valid when the user wants routing, SSR, app-router pages, metadata, or a production app structure, and other frontend stacks are allowed when explicitly requested. Plain HTML/CSS/JS remains supported, but it is not the default.
 
-Use Motion React for simple parallax, Raycast-clean app pages, floating cards, command palettes, UI panels, GLB product models, Web Audio scroll sound, and transform/opacity scroll progress.
-
-Use GSAP ScrollTrigger for pinned timelines, Apple-like staged product storytelling, NVIDIA-like technical reveal patterns, GLB hardware/GPU-style models, Web Audio scroll sound, product scale/rotation, and spec panels inside a pinned section.
-
-Use the plain HTML/CSS/JS template only when the user explicitly requests no framework, wants a single-file demo, or the target environment cannot run a framework.
-
-Use the `web-template` reference pack when the task needs broader website design systems, page-type recipes, visual style references, social cards, decks, content pages, or richer frontend design guidance beyond the three scroll-specific starters.
+When Monich activates, read and scan the whole `templates/` folder first. Build an inventory of available folders before reading any specific template docs. Pick references only after the inventory exists, then learn from structure, rhythm, interaction, typography, spacing, and color logic without copying code line by line.
 
 ## Web Template References
 
@@ -91,31 +85,11 @@ Live examples from the web-template pack:
 - [Pricing Page](https://pricing-page-beige-psi.vercel.app/)
 - [ASCII Cosmos](https://ascii-cosmos.vercel.app/)
 
-## Run The React + Motion Template
+## Use The Template Folder
 
-```bash
-cd templates/react-vite-motion
-npm install
-npm run dev
-```
+Read and scan `templates/` before choosing references. Agents should inventory the folder contents, inspect only the smallest relevant docs after that scan, then create a new implementation tailored to the user's request.
 
-## Run The React + GSAP Template
-
-```bash
-cd templates/react-vite-gsap
-npm install
-npm run dev
-```
-
-## Run The Plain Template
-
-Open `templates/plain-html-css-js/index.html` in a browser. It has no dependencies.
-
-## Use The Web Template Reference Pack
-
-The copied web template pack lives at `templates/web-template/`. Start with `templates/web-template/INDEX.md` or `templates/web-template/SKILL.md`.
-
-When Monich is activated, agents should include this folder in their template scan. They should not copy-paste these examples code-for-code. Use them as design-system and page-pattern references, then produce a new implementation tailored to the user's request.
+If a selected template is runnable, enter that selected folder and use its own README or package scripts. Do not assume a specific template path before scanning.
 
 ## Copy Into Another Project
 
@@ -147,7 +121,6 @@ Monich is released under the MIT License. See `LICENSE`.
 - Missing package: run `npm install` inside the selected template folder.
 - Blank page: check browser console and verify imports match package names.
 - Scroll scene too short: increase the wrapper height to `350vh` or `500vh`.
-- Pinned scene does not pin: verify GSAP `ScrollTrigger.registerPlugin(ScrollTrigger)` and timeline trigger refs.
 - 3D model is blank: verify `three` is installed, the canvas container has a stable height, and WebGL is available in the browser.
 - Motion too intense: confirm `prefers-reduced-motion` CSS and runtime checks are active.
 - Assets missing: replace image references with CSS mockups instead of inventing files.

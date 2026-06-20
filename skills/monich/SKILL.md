@@ -1,7 +1,7 @@
 ---
 name: monich
 license: MIT
-description: Build premium scroll-driven web pages and product showcases inspired by high-end app, hardware, and product interaction patterns. Use for Raycast-like, Apple-like, NVIDIA-like, RTX/GPU, SaaS, AI browser, parallax, sticky scroll, pinned reveal, Three.js GLB model, Web Audio sound effect, Motion React, GSAP ScrollTrigger, responsive accessibility, and performance-safe frontend requests.
+description: Build premium scroll-driven web pages and product showcases inspired by high-end app, hardware, and product interaction patterns. Use for Raycast-like, Apple-like, NVIDIA-like, RTX/GPU, SaaS, AI browser, parallax, sticky scroll, pinned reveal, Three.js GLB model, Web Audio sound effect, responsive accessibility, and performance-safe frontend requests.
 ---
 
 # Monich Skill
@@ -52,41 +52,11 @@ Only use general interaction patterns.
 
 Default to React for generated websites unless the user explicitly asks for another stack. Prefer React + Vite for fast runnable demos and React + Next.js for routed, production-style, SEO-aware, or app-router projects. Other stacks such as Astro, SvelteKit, Vue, Nuxt, vanilla Web Components, or plain HTML/CSS/JS are allowed when the user requests them or the host project already uses them.
 
-Use React + Motion when:
-
-- simple parallax
-- Raycast-like app landing
-- floating cards
-- UI panel reveal
-- CSS app mockups or imported Three.js GLB product models
-- scroll progress controls translate/scale/opacity
-
-Use React + GSAP ScrollTrigger when:
-
-- pinned scene
-- Apple-like staged product reveal
-- NVIDIA-like hardware reveal
-- imported Three.js GLB hardware/product models
-- scroll scrub timeline
-- feature/spec reveal inside pinned section
-
-Use plain HTML/CSS/JS when:
-
-- the user explicitly requests no framework
-- the user wants a one-file demo
-- the target environment cannot run a framework
-
 Use React + Next.js when:
 
 - the user asks for Next.js
 - the target project is already Next.js
 - the page needs routing, metadata, server components, static generation, or production app structure
-
-Use the web-template reference pack when:
-
-- the user asks for broader website design systems
-- the task needs page-type recipes such as landing pages, portfolios, decks, social cards, or content pages
-- the agent needs additional visual style references beyond the three scroll-specific starter templates
 
 ## Template Scanning Workflow
 
@@ -95,16 +65,15 @@ When this skill is activated, scan the available templates before writing code.
 If using this repository directly:
 
 1. Inspect `templates/`.
-2. Include `templates/web-template/` in the scan.
-3. Read the smallest relevant template docs or `info.md` files.
-4. Use scroll-specific starters for implementation structure when appropriate.
-5. Use `web-template` references for design language, page recipes, composition, typography, and interaction ideas.
+2. Build an inventory of every immediate subfolder.
+3. Read only the smallest relevant docs or `info.md` files after the inventory exists.
+4. Choose references from the discovered folders.
 
 If using an installed skill:
 
 1. Inspect `assets/templates/`.
-2. Include `assets/templates/web-template/` in the scan.
-3. Read the smallest relevant template docs or `info.md` files.
+2. Build an inventory of every immediate subfolder.
+3. Read only the smallest relevant docs or `info.md` files after the inventory exists.
 
 Templates are learning references. Do not copy-paste a full template, page, component, or large code block into the generated project. Extract the intent, structure, motion rhythm, spacing, typography, and visual system, then create fresh code for the user's stack and content.
 
@@ -151,8 +120,7 @@ Map scroll progress like:
 - Avoid top, left, width, height, margin, padding animation.
 - Include prefers-reduced-motion.
 - Default to React components for generated websites, but adapt to Next.js, Astro, SvelteKit, Vue, Nuxt, or plain HTML/CSS/JS when requested or when the existing project requires it.
-- Scan `templates/` or installed `assets/templates/` before choosing references.
-- Include `web-template` in the scan when available.
+- Read and scan `templates/` or installed `assets/templates/` before choosing references.
 - Learn and adapt from templates; do not copy-paste template code line-by-line.
 - Write fresh components, data, CSS variables, class names, and content for the target project.
 - Match visible page copy to the language the user spoke. If the source template contains Chinese but the user writes in English or Indonesian, rewrite headings, labels, CTAs, alt text, and microcopy into that user language.
@@ -168,14 +136,9 @@ Map scroll progress like:
 
 ## Bundled Templates
 
-When this skill is installed directly, learn from templates in:
+When this skill is installed directly, learn from templates by scanning `assets/templates/`.
 
-- `assets/templates/react-vite-motion/` for Motion React parallax, GLB product assembly, and optional Web Audio scroll sound.
-- `assets/templates/react-vite-gsap/` for GSAP ScrollTrigger pinned timeline, GLB hardware reveal, and optional Web Audio scroll sound.
-- `assets/templates/plain-html-css-js/` for explicit no-framework sticky/parallax demos.
-- `assets/templates/web-template/` for the copied website design-system and page-template reference pack.
-
-The `web-template` reference pack contains Chinese-first template material. Use its composition, rhythm, typography, and page-type guidance, but localize final generated content to the user's language unless the user requests Chinese.
+Some templates may contain Chinese-first material. Use their composition, rhythm, typography, and page-type guidance, but localize final generated content to the user's language unless the user requests Chinese.
 
 If using the original multi-agent pack instead of the installable skill folder, the same templates also exist at `templates/` from the repository root.
 
