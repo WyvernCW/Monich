@@ -16,10 +16,14 @@ When building scroll showcase websites:
 - Avoid copying brand assets.
 - Avoid overanimated neon UI.
 - Prefer CSS mockups over missing images.
+- Scan `templates/` before choosing a reference, including `templates/web-template/`.
+- Learn from templates; do not copy-paste full template code into the generated project.
+- Adapt layout, interaction, color logic, typography, and motion into fresh code for the target stack.
 - Match visible page text to the language the user spoke.
 - Do not keep Chinese template copy unless the user asked for Chinese.
 
 If the task mentions Raycast, NVIDIA, Apple, sticky scroll, parallax, pinned reveal, or product showcase:
 
 - Read `skills/monich/SKILL.md`.
-- Use the closest template from `templates/`.
+- Scan `templates/`, including `templates/web-template/`.
+- Use the closest template as a reference, then generate new runnable code.

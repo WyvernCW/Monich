@@ -8,6 +8,7 @@ Read `skills/monich/SKILL.md` before implementing.
 
 ## Template Locations
 
+- Scan the whole `templates/` directory before choosing references. Do not limit selection to the three scroll starter folders.
 - Simple parallax and app UI reveal: `templates/react-vite-motion/`
 - Pinned timeline and staged product reveal: `templates/react-vite-gsap/`
 - Explicit no-framework or one-file demo: `templates/plain-html-css-js/`
@@ -29,6 +30,8 @@ Read `skills/monich/SKILL.md` before implementing.
 - Prefer CSS-only mockups when assets are missing.
 - Do not invent image imports.
 - Do not copy real brand assets, names, screenshots, logos, claims, exact layouts, or marketing text.
+- Learn and adapt from templates; do not copy-paste a template codebase or large template code blocks.
+- Recreate the useful layout, motion, spacing, and typography ideas as fresh code in the target stack.
 - Match visible copy to the language the user spoke.
 - If a web-template reference contains Chinese, rewrite headings, labels, CTAs, alt text, and microcopy into the user's language unless Chinese was requested.
 - Set `<html lang>` or framework metadata correctly.

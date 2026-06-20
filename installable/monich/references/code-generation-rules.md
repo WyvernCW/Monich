@@ -7,6 +7,9 @@
 - Use React + Next.js when the user asks for Next.js, the existing project uses Next.js, or the page needs routing, metadata, static generation, or app-router structure.
 - Adapt these patterns to Astro, SvelteKit, Vue, Nuxt, Web Components, or another frontend stack when requested.
 - Use plain HTML/CSS/JS only for explicit no-framework, one-file, or highly portable demos.
+- Scan `assets/templates/` before choosing references, including `assets/templates/web-template/`.
+- Use templates to learn structure and design intent, not as paste-in source.
+- Recreate patterns as fresh components, data, class names, CSS variables, and copy.
 - Keep the showcase in one readable component.
 - Use refs for scroll targets and pinned sections.
 - Use CSS classes for layout and visual layers.
@@ -58,7 +61,10 @@ Never import placeholder image files that do not exist.
 
 ## Template Selection
 
+- Always start by scanning the available `assets/templates/` folders.
 - `templates/react-vite-motion/`: simple parallax, app/SaaS pages, command palette, floating cards.
 - `templates/react-vite-gsap/`: pinned timeline, hardware reveal, Apple/NVIDIA-like staged product stories.
 - `templates/plain-html-css-js/`: explicit no-framework, one-file demo, simple portable example.
 - `templates/web-template/`: broader website design systems, page recipes, references, and template inspiration.
+
+Do not copy a template codebase into the generated project. Read the smallest relevant files, identify the reusable ideas, and write new code that fits the user's requested stack, content, and language.

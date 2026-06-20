@@ -88,6 +88,26 @@ Use the web-template reference pack when:
 - the task needs page-type recipes such as landing pages, portfolios, decks, social cards, or content pages
 - the agent needs additional visual style references beyond the three scroll-specific starter templates
 
+## Template Scanning Workflow
+
+When this skill is activated, scan the available templates before writing code.
+
+If using this repository directly:
+
+1. Inspect `templates/`.
+2. Include `templates/web-template/` in the scan.
+3. Read the smallest relevant template docs or `info.md` files.
+4. Use scroll-specific starters for implementation structure when appropriate.
+5. Use `web-template` references for design language, page recipes, composition, typography, and interaction ideas.
+
+If using an installed skill:
+
+1. Inspect `assets/templates/`.
+2. Include `assets/templates/web-template/` in the scan.
+3. Read the smallest relevant template docs or `info.md` files.
+
+Templates are learning references. Do not copy-paste a full template, page, component, or large code block into the generated project. Extract the intent, structure, motion rhythm, spacing, typography, and visual system, then create fresh code for the user's stack and content.
+
 ## Required Scroll Architecture
 
 Every generated page must include:
@@ -131,6 +151,10 @@ Map scroll progress like:
 - Avoid top, left, width, height, margin, padding animation.
 - Include prefers-reduced-motion.
 - Default to React components for generated websites, but adapt to Next.js, Astro, SvelteKit, Vue, Nuxt, or plain HTML/CSS/JS when requested or when the existing project requires it.
+- Scan `templates/` or installed `assets/templates/` before choosing references.
+- Include `web-template` in the scan when available.
+- Learn and adapt from templates; do not copy-paste template code line-by-line.
+- Write fresh components, data, CSS variables, class names, and content for the target project.
 - Match visible page copy to the language the user spoke. If the source template contains Chinese but the user writes in English or Indonesian, rewrite headings, labels, CTAs, alt text, and microcopy into that user language.
 - Set document language correctly, such as `<html lang="en">`, `<html lang="id">`, or the equivalent framework metadata.
 - Use CSS-only mockups when no assets are provided.
@@ -144,7 +168,7 @@ Map scroll progress like:
 
 ## Bundled Templates
 
-When this skill is installed directly, copy or adapt templates from:
+When this skill is installed directly, learn from templates in:
 
 - `assets/templates/react-vite-motion/` for Motion React parallax, GLB product assembly, and optional Web Audio scroll sound.
 - `assets/templates/react-vite-gsap/` for GSAP ScrollTrigger pinned timeline, GLB hardware reveal, and optional Web Audio scroll sound.

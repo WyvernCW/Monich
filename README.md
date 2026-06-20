@@ -62,9 +62,12 @@ The installable skill includes:
 Copy `Monich/` into a project, or keep it as a reusable reference folder. When a user asks for a premium scroll website, the agent should:
 
 1. Read `skills/monich/SKILL.md`.
-2. Pick one template.
-3. Generate or adapt runnable frontend code.
-4. Verify the build and scroll behavior.
+2. Scan the whole `templates/` directory, including `templates/web-template/`.
+3. Pick the smallest relevant reference set.
+4. Learn from the selected templates, then generate fresh runnable frontend code.
+5. Verify the build and scroll behavior.
+
+Templates are references, not code to paste wholesale. Agents should study layout structure, motion timing, visual rhythm, typography, spacing, and interaction ideas, then rebuild the requested site in the target stack with new components, content, data, and styling.
 
 ## Template Choice
 
@@ -111,6 +114,8 @@ Open `templates/plain-html-css-js/index.html` in a browser. It has no dependenci
 ## Use The Web Template Reference Pack
 
 The copied web template pack lives at `templates/web-template/`. Start with `templates/web-template/INDEX.md` or `templates/web-template/SKILL.md`.
+
+When Monich is activated, agents should include this folder in their template scan. They should not copy-paste these examples code-for-code. Use them as design-system and page-pattern references, then produce a new implementation tailored to the user's request.
 
 ## Copy Into Another Project
 

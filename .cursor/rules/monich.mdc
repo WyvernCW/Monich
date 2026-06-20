@@ -17,7 +17,8 @@ Use this rule when a user asks for a Raycast-style website, Apple-style showcase
 ## Files To Read
 
 1. `skills/monich/SKILL.md`
-2. Choose one template only:
+2. Scan the available folders in `templates/`, including `templates/web-template/`.
+3. Choose the smallest relevant reference set:
    - `templates/react-vite-motion/` for simple parallax and app UI reveals
    - `templates/react-vite-gsap/` for pinned scrub timelines
    - `templates/plain-html-css-js/` for explicit no-framework work
@@ -38,6 +39,9 @@ Use this rule when a user asks for a Raycast-style website, Apple-style showcase
 - Add responsive layouts and mobile fallbacks.
 - Add `prefers-reduced-motion` CSS.
 - Keep imports and dependencies exact.
+- Learn from template structure, visual systems, motion timing, and component patterns.
+- Do not copy-paste template code line-by-line into the generated project.
+- Write fresh components, styles, content, and data for the target stack.
 - Match visible copy to the language the user spoke.
 - If a web-template reference contains Chinese, rewrite the generated page copy into the user's language unless Chinese was requested.
 - Set `<html lang>` or framework metadata to the content language.
@@ -47,6 +51,7 @@ Use this rule when a user asks for a Raycast-style website, Apple-style showcase
 - Do not copy Raycast, NVIDIA, Apple, or any real brand.
 - Do not use their assets, logos, screenshots, product names, claims, or exact layouts.
 - Do not invent missing assets.
+- Do not ship a copied template with only text or color substitutions.
 - Do not leave Chinese placeholder copy in non-Chinese user requests.
 - Do not animate layout properties such as top, left, width, height, margin, or padding.
 - Do not create generic neon AI SaaS slop or particle-heavy backgrounds.
