@@ -2,7 +2,7 @@ interface:
   display_name: "Monich"
   short_description: "Premium scroll-driven showcase websites"
   brand_color: "#704421"
-  default_prompt: "Use $monich to build a premium scroll-driven product showcase. Recursively scan assets/templates, including every folder and file in web-template/design-templates, web-template/horizontal-craft, and web-template/design-systems when present. Find the closest matching template for the user's request, learn and adapt the references, write fresh code, use responsive motion, and copy no brand assets."
+  default_prompt: "Use $monich to build a premium scroll-driven product showcase. Recursively scan assets/templates, including every folder and file in web-template/design-templates, web-template/horizontal-craft, and web-template/design-systems when present. Read actual .html/.css/.js/.jsx/.tsx/.md/.json/design-token files, not only SKILL.md, README.md, info.md, or folder names. Find the closest matching template for the user's request, show 2-4 candidate references with rationale for broad or style-sensitive requests, translate the selected web-template style into the target stack, write fresh code, use responsive motion, and copy no brand assets."
 
 policy:
   allow_implicit_invocation: true

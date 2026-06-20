@@ -64,9 +64,11 @@ Copy `Monich/` into a project, or keep it as a reusable reference folder. When a
 1. Read `skills/monich/SKILL.md`.
 2. Recursively scan the whole `templates/` directory.
 3. If present, scan every folder and file inside `templates/web-template/design-templates/`, `templates/web-template/horizontal-craft/`, and `templates/web-template/design-systems/`.
-4. Pick the closest matching template or reference set for the user's website request.
-4. Learn from the selected templates, then generate fresh runnable frontend code.
-5. Verify the build and scroll behavior.
+4. Read actual source/reference files, including `.html`, `.css`, `.js`, `.jsx`, `.tsx`, `.md`, `.json`, and design-token files. Do not rely only on `SKILL.md`, `README.md`, `info.md`, or folder names.
+5. Pick the closest matching template or reference set for the user's website request.
+6. For broad or style-sensitive requests, show the user 2-4 closest template references with a short rationale before implementation.
+7. Learn from the selected templates, then generate fresh runnable frontend code.
+8. Verify the build and scroll behavior.
 
 Templates are references, not code to paste wholesale. Agents should study layout structure, motion timing, visual rhythm, typography, spacing, and interaction ideas, then rebuild the requested site in the target stack with new components, content, data, and styling.
 
@@ -74,7 +76,7 @@ Templates are references, not code to paste wholesale. Agents should study layou
 
 Default to React for generated websites unless the user asks for a different stack. React + Vite is the default for fast runnable demos, React + Next.js is valid when the user wants routing, SSR, app-router pages, metadata, or a production app structure, and other frontend stacks are allowed when explicitly requested. Plain HTML/CSS/JS remains supported, but it is not the default.
 
-When Monich activates, read and recursively scan the whole `templates/` folder first. Do not stop at top-level README files. If present, scan every folder and file inside `templates/web-template/design-templates/`, `templates/web-template/horizontal-craft/`, and `templates/web-template/design-systems/`. Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, and stack. Pick the closest matching reference after the inventory exists, then learn from structure, rhythm, interaction, typography, spacing, and color logic without copying code line by line.
+When Monich activates, read and recursively scan the whole `templates/` folder first. Do not stop at top-level README files. If present, scan every folder and file inside `templates/web-template/design-templates/`, `templates/web-template/horizontal-craft/`, and `templates/web-template/design-systems/`. Read actual `.html`, `.css`, `.js`, `.jsx`, `.tsx`, `.md`, `.json`, and design-token files, not just `SKILL.md`, `README.md`, `info.md`, or folder names. Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, component language, color system, typography, and stack. Pick the closest matching reference after the inventory exists, then learn from structure, rhythm, interaction, typography, spacing, and color logic without copying code line by line.
 
 ## Web Template References
 
@@ -88,7 +90,9 @@ Live examples from the web-template pack:
 
 ## Use The Template Folder
 
-Read and recursively scan `templates/` before choosing references. Agents should inventory the folder contents, inspect the nested reference folders and files, find the closest match to the user's requested website, then create a new implementation tailored to the request.
+Read and recursively scan `templates/` before choosing references. Agents should inventory the folder contents, inspect the nested reference folders and files including `.html`, find the closest match to the user's requested website, show candidate references when the style direction is broad, then create a new implementation tailored to the request.
+
+Starter templates are implementation aids only. If a `web-template` reference is closer to the requested style, the generated page must carry that selected reference's layout, composition, typography, palette logic, and interaction feel even when the final code is React, Next.js, or another framework.
 
 If a selected template is runnable, enter that selected folder and use its own README or package scripts. Do not assume a specific template path before scanning.
 

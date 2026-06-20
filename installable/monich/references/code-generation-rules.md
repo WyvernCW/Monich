@@ -8,6 +8,7 @@
 - Adapt these patterns to Astro, SvelteKit, Vue, Nuxt, Web Components, or another frontend stack when requested.
 - Use plain HTML/CSS/JS when requested or when discovered templates make it the best fit.
 - Read and recursively scan `assets/templates/` before choosing references.
+- Read actual `.html`, `.css`, `.js`, `.jsx`, `.tsx`, `.md`, `.json`, and design-token files in every template/reference folder.
 - Use templates to learn structure and design intent, not as paste-in source.
 - Recreate patterns as fresh components, data, class names, CSS variables, and copy.
 - Keep the showcase in one readable component.
@@ -60,7 +61,11 @@ Never import placeholder image files that do not exist.
 
 - Always start by reading and recursively scanning the available `assets/templates/` folder.
 - If present, scan every folder and file inside `assets/templates/web-template/design-templates/`, `assets/templates/web-template/horizontal-craft/`, and `assets/templates/web-template/design-systems/`.
-- Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, and stack.
+- Do not rely only on `SKILL.md`, `README.md`, `info.md`, or folder names. Read the actual implementation/reference files, especially `.html` files.
+- Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, component language, color system, typography, and stack.
 - Choose the closest matching template or reference set only after the inventory exists.
+- For broad or style-sensitive requests, present 2-4 closest template references to the user with a short rationale before implementation.
 
 Do not copy a template codebase into the generated project. Read the selected matching reference files deeply, identify the reusable ideas, and write new code that fits the user's requested stack, content, and language.
+
+Do not default to starter-template visuals when a closer `web-template` reference exists. Translate the selected reference into React, Next.js, or the requested stack while preserving its layout, composition, typography, palette logic, and interaction feel.

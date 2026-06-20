@@ -30,14 +30,16 @@ Use the Monich skill for requests containing concepts like:
 1. Read `skills/monich/SKILL.md`.
 2. Read and recursively scan the whole `templates/` folder before choosing references. Do not stop at top-level README files.
 3. If present, scan every folder and file inside `templates/web-template/design-templates/`, `templates/web-template/horizontal-craft/`, and `templates/web-template/design-systems/`.
-4. Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, and stack.
-5. Choose the template or reference set most similar to what the user wants to build.
-6. Learn from selected references without copying their code line-by-line.
-5. Generate complete runnable code.
-6. Include responsive CSS.
-7. Include reduced-motion fallback.
-8. Avoid broken imports.
-9. Avoid copying Raycast, NVIDIA, Apple, or any real brand.
+4. Read the actual source/reference files inside every template/reference folder, including `.html`, `.css`, `.js`, `.jsx`, `.tsx`, `.md`, `.json`, and any design-token files. Do not rely only on `SKILL.md`, `README.md`, `info.md`, or folder names.
+5. Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, component language, color system, typography, and stack.
+6. Compare the user's request against that inventory and present 2-4 closest template references to the user with a short rationale before implementation when the request is broad or style-sensitive.
+7. Choose the template or reference set most similar to what the user wants to build.
+8. Learn from selected references without copying their code line-by-line.
+9. Generate complete runnable code.
+10. Include responsive CSS.
+11. Include reduced-motion fallback.
+12. Avoid broken imports.
+13. Avoid copying Raycast, NVIDIA, Apple, or any real brand.
 10. Match visible copy to the language the user spoke.
 
 ## Coding Rules
@@ -54,6 +56,8 @@ Use the Monich skill for requests containing concepts like:
 - Default to React for generated websites.
 - Adapt to Next.js, Astro, SvelteKit, Vue, Nuxt, or plain HTML/CSS/JS when requested.
 - Use the recursive template scan as references for layout, motion rhythm, typography scale, spacing, and component patterns.
+- Do not let starter templates define the visual result when a closer `web-template` reference exists.
+- If implementing in React, Next.js, or another framework, translate the selected `web-template` visual language into that stack instead of recreating the starter-template look.
 - Do not copy-paste a template codebase or large code blocks into the user's project.
 - Rebuild the page in the target stack with fresh component names, content, data, tokens, and CSS that fit the user request.
 - If a copied template contains Chinese, translate or rewrite all visible UI copy into the user's language unless Chinese was requested.

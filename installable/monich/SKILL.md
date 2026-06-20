@@ -67,18 +67,24 @@ If using this repository directly:
 1. Inspect `templates/`.
 2. Recursively scan every folder and file under `templates/`.
 3. If present, scan every folder and file inside `templates/web-template/design-templates/`, `templates/web-template/horizontal-craft/`, and `templates/web-template/design-systems/`.
-4. Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, and stack.
-5. Choose the closest matching template or reference set for the user's requested website.
+4. Read actual source/reference files inside every template/reference folder, including `.html`, `.css`, `.js`, `.jsx`, `.tsx`, `.md`, `.json`, and design-token files. Do not rely only on `SKILL.md`, `README.md`, `info.md`, or folder names.
+5. Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, component language, color system, typography, and stack.
+6. Privately compare the user's request against the inventory and choose the closest matching template or reference set for the requested website.
+7. For broad or style-sensitive requests, present 2-4 closest template references to the user with a short rationale before implementation.
 
 If using an installed skill:
 
 1. Inspect `assets/templates/`.
 2. Recursively scan every folder and file under `assets/templates/`.
 3. If present, scan every folder and file inside `assets/templates/web-template/design-templates/`, `assets/templates/web-template/horizontal-craft/`, and `assets/templates/web-template/design-systems/`.
-4. Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, and stack.
-5. Choose the closest matching template or reference set for the user's requested website.
+4. Read actual source/reference files inside every template/reference folder, including `.html`, `.css`, `.js`, `.jsx`, `.tsx`, `.md`, `.json`, and design-token files. Do not rely only on `SKILL.md`, `README.md`, `info.md`, or folder names.
+5. Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, component language, color system, typography, and stack.
+6. Privately compare the user's request against the inventory and choose the closest matching template or reference set for the requested website.
+7. For broad or style-sensitive requests, present 2-4 closest template references to the user with a short rationale before implementation.
 
 Templates are learning references. Do not copy-paste a full template, page, component, or large code block into the generated project. Extract the intent, structure, motion rhythm, spacing, typography, and visual system, then create fresh code for the user's stack and content.
+
+Starter templates are implementation aids only. Do not default to the visual style of starter templates when a closer `web-template` reference exists. If building in React, Next.js, or another framework, translate the selected `web-template` reference into that stack while preserving its layout, composition, typography, palette logic, and interaction feel.
 
 ## Required Scroll Architecture
 
@@ -124,6 +130,7 @@ Map scroll progress like:
 - Include prefers-reduced-motion.
 - Default to React components for generated websites, but adapt to Next.js, Astro, SvelteKit, Vue, Nuxt, or plain HTML/CSS/JS when requested or when the existing project requires it.
 - Read and recursively scan `templates/` or installed `assets/templates/` before choosing references.
+- Read real template implementation files, especially `.html`, `.css`, and `.js`, before judging visual similarity.
 - Learn and adapt from templates; do not copy-paste template code line-by-line.
 - Write fresh components, data, CSS variables, class names, and content for the target project.
 - Match visible page copy to the language the user spoke. If the source template contains Chinese but the user writes in English or Indonesian, rewrite headings, labels, CTAs, alt text, and microcopy into that user language.

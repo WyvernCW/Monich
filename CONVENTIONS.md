@@ -16,8 +16,11 @@ When building scroll showcase websites:
 - Prefer CSS mockups over missing images.
 - Read and recursively scan the whole `templates/` folder before choosing references.
 - If present, scan every folder and file inside `templates/web-template/design-templates/`, `templates/web-template/horizontal-craft/`, and `templates/web-template/design-systems/`.
+- Read actual source/reference files, including `.html`, `.css`, `.js`, `.jsx`, `.tsx`, `.md`, `.json`, and design-token files. Do not only read `SKILL.md`, `README.md`, or `info.md`.
 - Choose the closest matching template or reference set based on the user's requested website.
+- For broad or style-sensitive requests, give the user 2-4 closest template references and a short rationale before building.
 - Learn from templates; do not copy-paste full template code into the generated project.
+- Do not default to starter-template visuals when a closer `web-template` reference exists.
 - Adapt layout, interaction, color logic, typography, and motion into fresh code for the target stack.
 - Match visible page text to the language the user spoke.
 - Do not keep Chinese template copy unless the user asked for Chinese.
@@ -26,4 +29,5 @@ If the task mentions Raycast, NVIDIA, Apple, sticky scroll, parallax, pinned rev
 
 - Read `skills/monich/SKILL.md`.
 - Read and recursively scan the whole `templates/` folder.
+- Read the actual `.html` and implementation files in every template/reference folder.
 - Use the closest template as a reference, then generate new runnable code.

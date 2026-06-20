@@ -13,7 +13,9 @@ Use progressive disclosure, but always read and recursively scan the available `
 - Default to React for generated websites unless the user asks for another stack.
 - Start by recursively scanning `templates/` so the available template families are known.
 - If present, scan every folder and file inside `templates/web-template/design-templates/`, `templates/web-template/horizontal-craft/`, and `templates/web-template/design-systems/`.
-- Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, and stack.
+- Read actual source/reference files inside every template/reference folder, including `.html`, `.css`, `.js`, `.jsx`, `.tsx`, `.md`, `.json`, and design-token files. Do not rely only on `SKILL.md`, `README.md`, `info.md`, or folder names.
+- Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, component language, color system, typography, and stack.
+- For broad or style-sensitive requests, show the user 2-4 closest template references with a short rationale before implementation.
 - Choose the closest matching template or reference set only after that scan.
 - For Next.js requests or existing Next.js projects, adapt discovered template patterns into the app-router or pages-router structure already in the project.
 - For Astro, SvelteKit, Vue, Nuxt, or other stacks, preserve the Monich scroll architecture and translate the component patterns into the requested framework.
@@ -26,6 +28,8 @@ Use progressive disclosure, but always read and recursively scan the available `
 - Prefer CSS mockups when no assets are provided.
 - Learn and adapt from templates; do not copy-paste template code line-by-line into the generated project.
 - Use templates to extract layout strategy, visual rhythm, motion timing, spacing, and interaction intent, then write fresh code for the target stack.
+- Do not default back to starter-template visuals after reading `web-template` references.
+- When generating React or Next.js, translate the chosen `web-template` style into React/Next.js components instead of recreating the starter-template UI.
 - Animate transform and opacity.
 - Include responsive CSS and a reduced-motion fallback.
 - Match visible copy to the language the user spoke. The web-template pack contains Chinese-first examples, but generated pages should not stay Chinese unless the user requests Chinese.

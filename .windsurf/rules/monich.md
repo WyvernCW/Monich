@@ -8,7 +8,7 @@ Read `skills/monich/SKILL.md` before implementing.
 
 ## Template Locations
 
-Read and recursively scan the whole `templates/` directory before choosing references. Do not stop at top-level README files. If present, scan every folder and file inside `templates/web-template/design-templates/`, `templates/web-template/horizontal-craft/`, and `templates/web-template/design-systems/`. Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, and stack, then choose the closest matching template or reference set.
+Read and recursively scan the whole `templates/` directory before choosing references. Do not stop at top-level README files. If present, scan every folder and file inside `templates/web-template/design-templates/`, `templates/web-template/horizontal-craft/`, and `templates/web-template/design-systems/`. Read actual source/reference files including `.html`, `.css`, `.js`, `.jsx`, `.tsx`, `.md`, `.json`, and design-token files; do not rely only on `SKILL.md`, `README.md`, `info.md`, or folder names. Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, component language, color system, typography, and stack. For broad or style-sensitive requests, show the user 2-4 closest template references with a short rationale before implementation. Then choose the closest matching template or reference set.
 
 ## Implementation Rules
 
@@ -27,6 +27,8 @@ Read and recursively scan the whole `templates/` directory before choosing refer
 - Do not invent image imports.
 - Do not copy real brand assets, names, screenshots, logos, claims, exact layouts, or marketing text.
 - Learn and adapt from templates; do not copy-paste a template codebase or large template code blocks.
+- Do not default back to starter-template visuals when a closer `web-template` reference exists.
+- If implementing in React, Next.js, or another framework, translate the selected `web-template` style into that stack.
 - Recreate the useful layout, motion, spacing, and typography ideas as fresh code in the target stack.
 - Match visible copy to the language the user spoke.
 - If a web-template reference contains Chinese, rewrite headings, labels, CTAs, alt text, and microcopy into the user's language unless Chinese was requested.
