@@ -29,15 +29,19 @@ Use the Monich skill for requests containing concepts like:
 
 1. Read `skills/monich/SKILL.md`.
 2. Pick the correct implementation path:
-   - Motion React for simple parallax
-   - GSAP ScrollTrigger for pinned timeline
-   - plain HTML/CSS/JS if no framework requested
+   - React by default
+   - React + Motion for simple parallax
+   - React + GSAP ScrollTrigger for pinned timeline
+   - React + Next.js if the user asks for Next.js or the project already uses it
+   - plain HTML/CSS/JS only when explicit no-framework or one-file output is requested
+   - other frameworks when the user or existing project requires them
 3. Use the matching template from `templates/`.
 4. Generate complete runnable code.
 5. Include responsive CSS.
 6. Include reduced-motion fallback.
 7. Avoid broken imports.
 8. Avoid copying Raycast, NVIDIA, Apple, or any real brand.
+9. Match visible copy to the language the user spoke.
 
 ## Coding Rules
 
@@ -50,6 +54,10 @@ Use the Monich skill for requests containing concepts like:
 - Do not create generic neon AI SaaS slop.
 - Do not use external assets unless the user provides them.
 - Use CSS-only mockups when assets are missing.
+- Default to React for generated websites.
+- Adapt to Next.js, Astro, SvelteKit, Vue, Nuxt, or plain HTML/CSS/JS when requested.
+- If a copied template contains Chinese, translate or rewrite all visible UI copy into the user's language unless Chinese was requested.
+- Set the page language correctly with `<html lang>` or framework metadata.
 
 ## Final Quality Check
 
@@ -63,4 +71,3 @@ Before finishing, verify:
 - Reduced motion is supported.
 - No brand assets were copied.
 - No unused dependency was installed.
-

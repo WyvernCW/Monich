@@ -13,6 +13,7 @@
   "templates": [
     "installable/monich/assets/templates/react-vite-motion",
     "installable/monich/assets/templates/react-vite-gsap",
-    "installable/monich/assets/templates/plain-html-css-js"
+    "installable/monich/assets/templates/plain-html-css-js",
+    "installable/monich/assets/templates/web-template"
   ]
 }

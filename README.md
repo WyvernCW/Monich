@@ -68,11 +68,25 @@ Copy `Monich/` into a project, or keep it as a reusable reference folder. When a
 
 ## Template Choice
 
+Default to React for generated websites unless the user asks for a different stack. React + Vite is the default for fast runnable demos, React + Next.js is valid when the user wants routing, SSR, app-router pages, metadata, or a production app structure, and other frontend stacks are allowed when explicitly requested. Plain HTML/CSS/JS remains supported, but it is not the default.
+
 Use Motion React for simple parallax, Raycast-clean app pages, floating cards, command palettes, UI panels, GLB product models, Web Audio scroll sound, and transform/opacity scroll progress.
 
 Use GSAP ScrollTrigger for pinned timelines, Apple-like staged product storytelling, NVIDIA-like technical reveal patterns, GLB hardware/GPU-style models, Web Audio scroll sound, product scale/rotation, and spec panels inside a pinned section.
 
-Use the plain HTML/CSS/JS template when no framework is requested or when the user needs a single-file demo.
+Use the plain HTML/CSS/JS template only when the user explicitly requests no framework, wants a single-file demo, or the target environment cannot run a framework.
+
+Use the `web-template` reference pack when the task needs broader website design systems, page-type recipes, visual style references, social cards, decks, content pages, or richer frontend design guidance beyond the three scroll-specific starters.
+
+## Web Template References
+
+The copied web-template pack includes many Chinese-first examples and typography references. Agents must treat those as visual and structural references, not as a required output language. Generate visible copy in the language the user spoke unless the user asks for another language. Set `<html lang>` correctly for the generated page.
+
+Live examples from the web-template pack:
+
+- [Xianying Tool](https://xianying-tool.vercel.app/)
+- [Pricing Page](https://pricing-page-beige-psi.vercel.app/)
+- [ASCII Cosmos](https://ascii-cosmos.vercel.app/)
 
 ## Run The React + Motion Template
 
@@ -93,6 +107,10 @@ npm run dev
 ## Run The Plain Template
 
 Open `templates/plain-html-css-js/index.html` in a browser. It has no dependencies.
+
+## Use The Web Template Reference Pack
+
+The copied web template pack lives at `templates/web-template/`. Start with `templates/web-template/INDEX.md` or `templates/web-template/SKILL.md`.
 
 ## Copy Into Another Project
 

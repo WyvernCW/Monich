@@ -10,11 +10,17 @@ Read `skills/monich/SKILL.md` before implementing.
 
 - Simple parallax and app UI reveal: `templates/react-vite-motion/`
 - Pinned timeline and staged product reveal: `templates/react-vite-gsap/`
-- No framework or one-file demo: `templates/plain-html-css-js/`
+- Explicit no-framework or one-file demo: `templates/plain-html-css-js/`
+- Broader website design references and page recipes: `templates/web-template/`
 
 ## Implementation Rules
 
 - Generate runnable code, not advice only.
+- Default to React for generated websites.
+- Use React + Vite for fast runnable demos.
+- Use React + Next.js when the user asks for Next.js or the existing project uses it.
+- Adapt to Astro, SvelteKit, Vue, Nuxt, or another framework when requested.
+- Use plain HTML/CSS/JS only for explicit no-framework or one-file requests.
 - Use semantic HTML and readable component names.
 - Use sticky sections with tall wrappers from 250vh to 500vh.
 - Include one clear focal app/product/object mockup.
@@ -23,6 +29,9 @@ Read `skills/monich/SKILL.md` before implementing.
 - Prefer CSS-only mockups when assets are missing.
 - Do not invent image imports.
 - Do not copy real brand assets, names, screenshots, logos, claims, exact layouts, or marketing text.
+- Match visible copy to the language the user spoke.
+- If a web-template reference contains Chinese, rewrite headings, labels, CTAs, alt text, and microcopy into the user's language unless Chinese was requested.
+- Set `<html lang>` or framework metadata correctly.
 
 ## Motion And Performance
 
@@ -41,4 +50,3 @@ Read `skills/monich/SKILL.md` before implementing.
 - Keep content readable without animation.
 - Preserve focus visibility and semantic landmarks.
 - Make the mobile layout usable without hover.
-

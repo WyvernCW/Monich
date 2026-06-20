@@ -10,9 +10,13 @@ Use progressive disclosure. Do not load every template unless needed.
 
 ## Template Selection
 
+- Default to React for generated websites unless the user asks for another stack.
 - For simple parallax, floating cards, app UI reveals, and Raycast-clean SaaS pages, use `templates/react-vite-motion/`.
 - For Apple/NVIDIA-style pinned timelines, staged hardware/product reveals, scroll scrub sections, and technical spec reveals, use `templates/react-vite-gsap/`.
+- For Next.js requests or existing Next.js projects, adapt the React template into the app-router or pages-router structure already in the project.
+- For Astro, SvelteKit, Vue, Nuxt, or other stacks, preserve the Monich scroll architecture and translate the component patterns into the requested framework.
 - For no-framework requests or quick portable demos, use `templates/plain-html-css-js/`.
+- For broader website references, read `templates/web-template/INDEX.md` or `templates/web-template/SKILL.md`.
 
 ## Working Rules
 
@@ -22,5 +26,6 @@ Use progressive disclosure. Do not load every template unless needed.
 - Prefer CSS mockups when no assets are provided.
 - Animate transform and opacity.
 - Include responsive CSS and a reduced-motion fallback.
+- Match visible copy to the language the user spoke. The web-template pack contains Chinese-first examples, but generated pages should not stay Chinese unless the user requests Chinese.
+- Set `<html lang>` or framework metadata to the generated content language.
 - Verify imports, package dependencies, and build commands before claiming completion.
-

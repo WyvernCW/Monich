@@ -2,6 +2,11 @@
 
 ## React Component Rules
 
+- Default to React for generated websites unless the user asks for a different stack.
+- Use React + Vite for fast runnable demos.
+- Use React + Next.js when the user asks for Next.js, the existing project uses Next.js, or the page needs routing, metadata, static generation, or app-router structure.
+- Adapt these patterns to Astro, SvelteKit, Vue, Nuxt, Web Components, or another frontend stack when requested.
+- Use plain HTML/CSS/JS only for explicit no-framework, one-file, or highly portable demos.
 - Keep the showcase in one readable component.
 - Use refs for scroll targets and pinned sections.
 - Use CSS classes for layout and visual layers.
@@ -31,6 +36,13 @@
 - Do not add dependencies that are not used.
 - Do not use external images unless the user provides them.
 
+## Language Rules
+
+- Match visible copy to the language the user spoke unless the user explicitly requests another language.
+- The copied `web-template` pack contains Chinese-first material. Treat it as design reference, then rewrite headings, labels, CTAs, alt text, form placeholders, and microcopy into the user's language.
+- Set `<html lang>` or framework metadata to the generated content language.
+- Load Chinese/CJK typography references only when the user asks for Chinese/CJK output or provides substantial Chinese/CJK content.
+
 ## No Broken Assets
 
 If assets are missing:
@@ -48,4 +60,5 @@ Never import placeholder image files that do not exist.
 
 - `templates/react-vite-motion/`: simple parallax, app/SaaS pages, command palette, floating cards.
 - `templates/react-vite-gsap/`: pinned timeline, hardware reveal, Apple/NVIDIA-like staged product stories.
-- `templates/plain-html-css-js/`: no framework, one-file demo, simple portable example.
+- `templates/plain-html-css-js/`: explicit no-framework, one-file demo, simple portable example.
+- `templates/web-template/`: broader website design systems, page recipes, references, and template inspiration.

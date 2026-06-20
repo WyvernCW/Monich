@@ -50,6 +50,8 @@ Only use general interaction patterns.
 
 ## Stack Selection
 
+Default to React for generated websites unless the user explicitly asks for another stack. Prefer React + Vite for fast runnable demos and React + Next.js for routed, production-style, SEO-aware, or app-router projects. Other stacks such as Astro, SvelteKit, Vue, Nuxt, vanilla Web Components, or plain HTML/CSS/JS are allowed when the user requests them or the host project already uses them.
+
 Use React + Motion when:
 
 - simple parallax
@@ -70,9 +72,21 @@ Use React + GSAP ScrollTrigger when:
 
 Use plain HTML/CSS/JS when:
 
-- user requests no framework
-- quick demo
-- one-file template
+- the user explicitly requests no framework
+- the user wants a one-file demo
+- the target environment cannot run a framework
+
+Use React + Next.js when:
+
+- the user asks for Next.js
+- the target project is already Next.js
+- the page needs routing, metadata, server components, static generation, or production app structure
+
+Use the web-template reference pack when:
+
+- the user asks for broader website design systems
+- the task needs page-type recipes such as landing pages, portfolios, decks, social cards, or content pages
+- the agent needs additional visual style references beyond the three scroll-specific starter templates
 
 ## Required Scroll Architecture
 
@@ -116,6 +130,9 @@ Map scroll progress like:
 - Animate transform and opacity.
 - Avoid top, left, width, height, margin, padding animation.
 - Include prefers-reduced-motion.
+- Default to React components for generated websites, but adapt to Next.js, Astro, SvelteKit, Vue, Nuxt, or plain HTML/CSS/JS when requested or when the existing project requires it.
+- Match visible page copy to the language the user spoke. If the source template contains Chinese but the user writes in English or Indonesian, rewrite headings, labels, CTAs, alt text, and microcopy into that user language.
+- Set document language correctly, such as `<html lang="en">`, `<html lang="id">`, or the equivalent framework metadata.
 - Use CSS-only mockups when no assets are provided.
 - Use user-provided `.glb`, `.gltf`, image, or video assets when available.
 - Use CSS-only mockups when no assets are available.
@@ -131,7 +148,10 @@ When this skill is installed directly, copy or adapt templates from:
 
 - `assets/templates/react-vite-motion/` for Motion React parallax, GLB product assembly, and optional Web Audio scroll sound.
 - `assets/templates/react-vite-gsap/` for GSAP ScrollTrigger pinned timeline, GLB hardware reveal, and optional Web Audio scroll sound.
-- `assets/templates/plain-html-css-js/` for a no-framework sticky/parallax demo.
+- `assets/templates/plain-html-css-js/` for explicit no-framework sticky/parallax demos.
+- `assets/templates/web-template/` for the copied website design-system and page-template reference pack.
+
+The `web-template` reference pack contains Chinese-first template material. Use its composition, rhythm, typography, and page-type guidance, but localize final generated content to the user's language unless the user requests Chinese.
 
 If using the original multi-agent pack instead of the installable skill folder, the same templates also exist at `templates/` from the repository root.
 
