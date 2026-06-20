@@ -60,20 +60,23 @@ Use React + Next.js when:
 
 ## Template Scanning Workflow
 
-When this skill is activated, scan the available templates before writing code.
+When this skill is activated, recursively scan the available templates before writing code.
 
 If using this repository directly:
 
 1. Inspect `templates/`.
-2. Build an inventory of every immediate subfolder.
-3. Read only the smallest relevant docs or `info.md` files after the inventory exists.
-4. Choose references from the discovered folders.
+2. Recursively scan every folder and file under `templates/`.
+3. If present, scan every folder and file inside `templates/web-template/design-templates/`, `templates/web-template/horizontal-craft/`, and `templates/web-template/design-systems/`.
+4. Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, and stack.
+5. Choose the closest matching template or reference set for the user's requested website.
 
 If using an installed skill:
 
 1. Inspect `assets/templates/`.
-2. Build an inventory of every immediate subfolder.
-3. Read only the smallest relevant docs or `info.md` files after the inventory exists.
+2. Recursively scan every folder and file under `assets/templates/`.
+3. If present, scan every folder and file inside `assets/templates/web-template/design-templates/`, `assets/templates/web-template/horizontal-craft/`, and `assets/templates/web-template/design-systems/`.
+4. Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, and stack.
+5. Choose the closest matching template or reference set for the user's requested website.
 
 Templates are learning references. Do not copy-paste a full template, page, component, or large code block into the generated project. Extract the intent, structure, motion rhythm, spacing, typography, and visual system, then create fresh code for the user's stack and content.
 
@@ -120,7 +123,7 @@ Map scroll progress like:
 - Avoid top, left, width, height, margin, padding animation.
 - Include prefers-reduced-motion.
 - Default to React components for generated websites, but adapt to Next.js, Astro, SvelteKit, Vue, Nuxt, or plain HTML/CSS/JS when requested or when the existing project requires it.
-- Read and scan `templates/` or installed `assets/templates/` before choosing references.
+- Read and recursively scan `templates/` or installed `assets/templates/` before choosing references.
 - Learn and adapt from templates; do not copy-paste template code line-by-line.
 - Write fresh components, data, CSS variables, class names, and content for the target project.
 - Match visible page copy to the language the user spoke. If the source template contains Chinese but the user writes in English or Indonesian, rewrite headings, labels, CTAs, alt text, and microcopy into that user language.
@@ -136,7 +139,7 @@ Map scroll progress like:
 
 ## Bundled Templates
 
-When this skill is installed directly, learn from templates by scanning `assets/templates/`.
+When this skill is installed directly, learn from templates by recursively scanning `assets/templates/`, including every nested folder and file in `assets/templates/web-template/design-templates/`, `assets/templates/web-template/horizontal-craft/`, and `assets/templates/web-template/design-systems/` when those folders exist.
 
 Some templates may contain Chinese-first material. Use their composition, rhythm, typography, and page-type guidance, but localize final generated content to the user's language unless the user requests Chinese.
 

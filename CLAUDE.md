@@ -6,13 +6,15 @@ At the start of any task involving scroll websites, sticky product stories, para
 
 `skills/monich/SKILL.md`
 
-Use progressive disclosure, but always read and scan the available `templates/` folder before choosing references. Do not jump directly into any named template subfolder.
+Use progressive disclosure, but always read and recursively scan the available `templates/` folder before choosing references. Do not stop at top-level README files or jump directly into one starter template.
 
 ## Template Selection
 
 - Default to React for generated websites unless the user asks for another stack.
-- Start by listing or scanning `templates/` so the available template families are known.
-- Choose references only after that scan.
+- Start by recursively scanning `templates/` so the available template families are known.
+- If present, scan every folder and file inside `templates/web-template/design-templates/`, `templates/web-template/horizontal-craft/`, and `templates/web-template/design-systems/`.
+- Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, and stack.
+- Choose the closest matching template or reference set only after that scan.
 - For Next.js requests or existing Next.js projects, adapt discovered template patterns into the app-router or pages-router structure already in the project.
 - For Astro, SvelteKit, Vue, Nuxt, or other stacks, preserve the Monich scroll architecture and translate the component patterns into the requested framework.
 

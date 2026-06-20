@@ -17,9 +17,10 @@ Use this rule when a user asks for a Raycast-style website, Apple-style showcase
 ## Files To Read
 
 1. `skills/monich/SKILL.md`
-2. Read and scan the whole `templates/` folder.
-3. Build an inventory of available template folders.
-4. Choose the smallest relevant reference set from that inventory.
+2. Read and recursively scan the whole `templates/` folder.
+3. If present, scan every folder and file inside `templates/web-template/design-templates/`, `templates/web-template/horizontal-craft/`, and `templates/web-template/design-systems/`.
+4. Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, and stack.
+5. Choose the closest matching template or reference set from that inventory.
 
 ## Implementation Rules
 

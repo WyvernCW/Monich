@@ -8,7 +8,7 @@ Read `skills/monich/SKILL.md` before implementing.
 
 ## Template Locations
 
-Read and scan the whole `templates/` directory before choosing references. Build an inventory from the folder contents, then choose the smallest relevant reference set.
+Read and recursively scan the whole `templates/` directory before choosing references. Do not stop at top-level README files. If present, scan every folder and file inside `templates/web-template/design-templates/`, `templates/web-template/horizontal-craft/`, and `templates/web-template/design-systems/`. Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, and stack, then choose the closest matching template or reference set.
 
 ## Implementation Rules
 

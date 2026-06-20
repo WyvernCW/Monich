@@ -62,8 +62,9 @@ The installable skill includes:
 Copy `Monich/` into a project, or keep it as a reusable reference folder. When a user asks for a premium scroll website, the agent should:
 
 1. Read `skills/monich/SKILL.md`.
-2. Scan the whole `templates/` directory, including `templates/web-template/`.
-3. Pick the smallest relevant reference set.
+2. Recursively scan the whole `templates/` directory.
+3. If present, scan every folder and file inside `templates/web-template/design-templates/`, `templates/web-template/horizontal-craft/`, and `templates/web-template/design-systems/`.
+4. Pick the closest matching template or reference set for the user's website request.
 4. Learn from the selected templates, then generate fresh runnable frontend code.
 5. Verify the build and scroll behavior.
 
@@ -73,7 +74,7 @@ Templates are references, not code to paste wholesale. Agents should study layou
 
 Default to React for generated websites unless the user asks for a different stack. React + Vite is the default for fast runnable demos, React + Next.js is valid when the user wants routing, SSR, app-router pages, metadata, or a production app structure, and other frontend stacks are allowed when explicitly requested. Plain HTML/CSS/JS remains supported, but it is not the default.
 
-When Monich activates, read and scan the whole `templates/` folder first. Build an inventory of available folders before reading any specific template docs. Pick references only after the inventory exists, then learn from structure, rhythm, interaction, typography, spacing, and color logic without copying code line by line.
+When Monich activates, read and recursively scan the whole `templates/` folder first. Do not stop at top-level README files. If present, scan every folder and file inside `templates/web-template/design-templates/`, `templates/web-template/horizontal-craft/`, and `templates/web-template/design-systems/`. Build an inventory of template names, metadata, visual style, page type, layout pattern, motion pattern, and stack. Pick the closest matching reference after the inventory exists, then learn from structure, rhythm, interaction, typography, spacing, and color logic without copying code line by line.
 
 ## Web Template References
 
@@ -87,7 +88,7 @@ Live examples from the web-template pack:
 
 ## Use The Template Folder
 
-Read and scan `templates/` before choosing references. Agents should inventory the folder contents, inspect only the smallest relevant docs after that scan, then create a new implementation tailored to the user's request.
+Read and recursively scan `templates/` before choosing references. Agents should inventory the folder contents, inspect the nested reference folders and files, find the closest match to the user's requested website, then create a new implementation tailored to the request.
 
 If a selected template is runnable, enter that selected folder and use its own README or package scripts. Do not assume a specific template path before scanning.
 
